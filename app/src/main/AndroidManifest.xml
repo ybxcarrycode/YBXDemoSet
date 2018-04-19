@@ -18,6 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".shopping_Animal.ShopCartActivity"/>
+
+        <activity android:name=".palette_cutImg.CutImgTestActivity"/>
+        
+        <activity android:name=".zoom.ZoomTestActivity"/>
+
     </application>
 
 </manifest>
