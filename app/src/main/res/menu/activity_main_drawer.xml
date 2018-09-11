@@ -6,15 +6,27 @@
             <item
                 android:id="@+id/nav_palette_cutimg"
                 android:icon="@drawable/ic_menu_camera"
-                android:title="Palette_CutImg"/>
+                android:title="Palette_CutImg" />
             <item
                 android:id="@+id/nav_shopping_cart"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="ShoppingCart"/> 
+                android:title="ShoppingCart" />
             <item
-                android:id="@+id/nav_zoom_test"
+                android:id="@+id/nav_textview_test"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="ShoppingCart"/>
+                android:title="TextViewTest" />
+            <item
+                android:id="@+id/nav_aspectj_test"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="AspectjTest" />
+            <item
+                android:id="@+id/nav_fingerprint_test"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Fingerprint" />
+            <item
+                android:id="@+id/nav_property_animation"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="PropertyAnimation" />
         </menu>
     </item>
 </menu>

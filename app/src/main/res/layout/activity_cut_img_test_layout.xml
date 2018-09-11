@@ -54,7 +54,7 @@
     <ImageView
         android:id="@+id/img_big"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:scaleType="fitXY"
         android:src="@drawable/tu_woxiu_zhanwei"
         />
@@ -79,6 +79,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="rgb_txt_1"/>
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
 
 
 </LinearLayout>

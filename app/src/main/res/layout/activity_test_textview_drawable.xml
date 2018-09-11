@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.ybxcc.testinysx.ybxdemoset.view.DrawableTextView
+        android:id="@+id/textView"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#a23133"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/ic_c32_main_weixin"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="454545"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:id="@+id/rel_green_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:background="@color/colorAccent"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="23dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_teacher_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="118dp"
+                android:text="建议学习488天"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/tv_add_teacher_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:minWidth="115dp"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:text="添加我的微信  "
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_c32_main_weixin" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="5dp"
+        android:src="@drawable/test_line_bug_shape" />
+
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.ybxcc.testinysx.ybxdemoset.palette_cutImg;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapRegionDecoder;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,10 +43,14 @@ public class CutImgTestActivity extends Activity {
     private TextView tv_1;
     private TextView tv_2;
 
+    private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cut_img_test_layout);
+
+        listView = findViewById(R.id.listView);
 
         img_big = (ImageView) findViewById(R.id.img_big);
         img_show = (ImageView) findViewById(R.id.img_show);
@@ -82,20 +88,26 @@ public class CutImgTestActivity extends Activity {
         BitmapRegionDecoder decoder = null;
 
         try {
-            InputStream is = getResources().openRawResource(R.drawable.tu_woxiu_zhanwei);
+            @SuppressLint("ResourceType") InputStream is = getResources().openRawResource(R.drawable.tu_woxiu_zhanwei);
             decoder = BitmapRegionDecoder.newInstance(is, true);
         } catch (Exception e) {
         }
         if (decoder != null) {
             Bitmap bitmap = decoder.decodeRegion(rect, null);
-            img_show.setImageBitmap(bitmap);
-            getPaletteData(bitmap);
+            if (bitmap != null) {
+                img_show.setImageBitmap(bitmap);
+
+                getPaletteData(bitmap);
+            } else {
+                Toast.makeText(CutImgTestActivity.this, "//null", Toast.LENGTH_SHORT).show();
+
+            }
         }
     }
 
     private void getPaletteData(Bitmap bitmap) {
         Palette.Builder builder = Palette.from(bitmap);
-        builder.maximumColorCount(10);
+        builder.maximumColorCount(50);
         builder.generate(new Palette.PaletteAsyncListener() {
             @Override
             public void onGenerated(Palette palette) {
@@ -115,14 +127,17 @@ public class CutImgTestActivity extends Activity {
                 }
                 int txt_rgb_1 = list.get(thePos).getBodyTextColor();
                 int txt_rgb_2 = list.get(thePos).getTitleTextColor();
-                
+
                 Log.e("palette", "population = " + thePopulation + "// rgb = " + list.get(thePos).getRgb()
                         + " // txt_rgb_1 = " + list.get(thePos).getBodyTextColor()
                         + " // txt_rgb_2 = " + list.get(thePos).getTitleTextColor());
-                
+
                 tv_1.setTextColor(txt_rgb_1);
                 tv_2.setTextColor(txt_rgb_2);
-                
+
+
+                ColorAdapter adapter = new ColorAdapter(CutImgTestActivity.this, list);
+                listView.setAdapter(adapter);
             }
         });
 

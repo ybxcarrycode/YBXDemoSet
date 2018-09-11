@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ybxcc.testinysx.ybxdemoset">
+    package="com.ybxcc.testinysx.ybxdemoset">
 
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,19 +12,26 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".shopping_Animal.ShopCartActivity"/>
+        <activity android:name=".shopping_Animal.ShopCartActivity" />
 
-        <activity android:name=".palette_cutImg.CutImgTestActivity"/>
-        
-        <activity android:name=".zoom.ZoomTestActivity"/>
+        <activity android:name=".palette_cutImg.CutImgTestActivity" />
+
+        <activity android:name=".test_textview.TestTextViewActivity" />
+
+        <activity android:name=".aop_aspectj.AspectActivity" />
+
+        <activity android:name=".fingerprint_recognition.FingerprintActivity" />
+
+        <activity android:name=".property_animation.PropertyAnimationActivity" />
 
     </application>
 

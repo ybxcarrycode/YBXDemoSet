@@ -16,8 +16,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ybxcc.testinysx.ybxdemoset.aop_aspectj.AspectActivity;
+import com.ybxcc.testinysx.ybxdemoset.fingerprint_recognition.FingerprintActivity;
 import com.ybxcc.testinysx.ybxdemoset.palette_cutImg.CutImgTestActivity;
+import com.ybxcc.testinysx.ybxdemoset.property_animation.PropertyAnimationActivity;
 import com.ybxcc.testinysx.ybxdemoset.shopping_Animal.ShopCartActivity;
+import com.ybxcc.testinysx.ybxdemoset.test_textview.TestTextViewActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -94,8 +98,14 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(context, CutImgTestActivity.class));
         } else if (id == R.id.nav_shopping_cart) {
             startActivity(new Intent(context, ShopCartActivity.class));
-        } else if (id == R.id.nav_zoom_test) {
-            
+        } else if (id == R.id.nav_textview_test) {
+            startActivity(new Intent(context, TestTextViewActivity.class));
+        } else if (id == R.id.nav_aspectj_test) {
+            startActivity(new Intent(context, AspectActivity.class));
+        } else if (id == R.id.nav_fingerprint_test) {
+            startActivity(new Intent(context, FingerprintActivity.class));
+        } else if (id == R.id.nav_property_animation) {
+            startActivity(new Intent(context, PropertyAnimationActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
