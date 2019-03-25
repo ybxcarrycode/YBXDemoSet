@@ -3,6 +3,9 @@
     package="com.ybxcc.testinysx.ybxdemoset">
 
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,6 +35,11 @@
         <activity android:name=".fingerprint_recognition.FingerprintActivity" />
 
         <activity android:name=".property_animation.PropertyAnimationActivity" />
+
+        <activity android:name=".smart_refresh_layout.SmartRefreshLayoutActivity" />
+
+
+        <service android:name=".service.FloatingChatService" />
 
     </application>
 

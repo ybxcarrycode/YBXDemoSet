@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.2"
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.ybxcc.testinysx.ybxdemoset"
         minSdkVersion 18
@@ -28,15 +28,23 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:design:26.0.0-alpha1'
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile 'com.android.support:palette-v7:26.0.0-alpha1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:palette-v7:27.1.1'
 
     // aop  aspectj  添加
     compile 'org.aspectj:aspectjrt:1.9.1'
 
     //添加 ConstraintLayout
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //添加Exoplayer
+    compile 'com.google.android.exoplayer:exoplayer:2.7.3'
+
+    //添加 SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+
 }
 
 // 下面的任务代码与dependencies同级
@@ -44,6 +52,7 @@ dependencies {
 import org.aspectj.bridge.IMessage
 import org.aspectj.bridge.MessageHandler
 import org.aspectj.tools.ajc.Main
+
 final def log = project.logger
 final def variants = project.android.applicationVariants
 

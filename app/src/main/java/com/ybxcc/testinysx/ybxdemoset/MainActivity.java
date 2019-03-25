@@ -21,6 +21,7 @@ import com.ybxcc.testinysx.ybxdemoset.fingerprint_recognition.FingerprintActivit
 import com.ybxcc.testinysx.ybxdemoset.palette_cutImg.CutImgTestActivity;
 import com.ybxcc.testinysx.ybxdemoset.property_animation.PropertyAnimationActivity;
 import com.ybxcc.testinysx.ybxdemoset.shopping_Animal.ShopCartActivity;
+import com.ybxcc.testinysx.ybxdemoset.smart_refresh_layout.SmartRefreshLayoutActivity;
 import com.ybxcc.testinysx.ybxdemoset.test_textview.TestTextViewActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -106,6 +107,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(context, FingerprintActivity.class));
         } else if (id == R.id.nav_property_animation) {
             startActivity(new Intent(context, PropertyAnimationActivity.class));
+        }else if (id == R.id.smart_refresh_layout) {
+            startActivity(new Intent(context, SmartRefreshLayoutActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
